@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+div.Corpo{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(red,rgb(49, 4, 4));
+}
+div.Formulario{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(15, 223, 50), rgb(8, 129, 69));
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-style: italic;
+    font-stretch: expanded;
+}
+input{
+    border-radius: 5px;
+}
+input.Botao{
+    width: 200px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-style: italic;
+    font-stretch: expanded;
+    background-image: linear-gradient(red,rgb(49, 4, 4));
+}
+input.Botao:hover{
+    width: 220px;
+    height: 50px;
+    background-image: linear-gradient(rgb(1, 255, 1),rgb(49, 4, 4));
+}
+input.Botao:active{
+    width: 180px;
+    height: 30px;
+    background-image: linear-gradient(rgb(2, 175, 2),rgb(12, 1, 1));
+}
+div.ContainerBotoes{
+
+}
