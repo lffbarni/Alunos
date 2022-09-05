@@ -9,7 +9,7 @@ div.Corpo{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgb(206, 51, 51),rgb(255, 255, 255));
+    background-image: linear-gradient(rgb(206, 51, 51),rgb(241, 115, 77), rgb(240, 143, 87));
 }
 div.Formulario{
     width: 300px;
@@ -19,10 +19,11 @@ div.Formulario{
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    background-image: linear-gradient(rgb(15, 223, 50), rgb(8, 129, 69));
+    background-image: linear-gradient(rgb(63, 102, 60), rgb(41, 54, 42));
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     font-style: italic;
     font-stretch: expanded;
+    font-size: 22px;
 }
 input{
     border-radius: 5px;
@@ -39,10 +40,10 @@ input.Botao{
     background-image: linear-gradient(rgb(226, 50, 50),rgb(49, 4, 4));
 }
 input.Botao:hover{
-    background-image: linear-gradient(rgb(1, 255, 1),rgb(49, 4, 4));
+    background-image: linear-gradient(rgb(45, 184, 45),rgb(49, 4, 4));
 }
 input.Botao:active{
-    background-image: linear-gradient(rgb(2, 175, 2),rgb(12, 1, 1));
+    background-image: linear-gradient(rgb(10, 145, 10),rgb(12, 1, 1));
 }
 div.ContainerBotoes{
     display: flex;
@@ -56,8 +57,9 @@ div.Lista{
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    background-image: linear-gradient(rgb(15, 223, 50), rgb(8, 129, 69));
+    background-image: linear-gradient(rgb(63, 102, 60), rgb(41, 54, 42));
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     font-style: italic;
     font-stretch: expanded;
+    font-size: 22px;
 }
