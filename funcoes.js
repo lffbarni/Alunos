@@ -9,7 +9,7 @@ class Alunos{
     }
 
     get Media(){
-        return (this.Nota1+this.Nota2+this.Nota3)/3;
+        return (parseInt(this.Nota1)+parseInt(this.Nota2)+parseInt(this.Nota3))/3;
     }
 }
 
@@ -85,6 +85,65 @@ function CadastraAluno(){
     window.alert("Aluno cadastrado com sucesso!")
 }
 
+function CriaBotoes(){
+    $("#AlunoAnterior").click(function(){
+        console.log("Anterior");
+        MudaAlunoLista("Anterior");
+    });
+    $("#ProximoAluno").click(function(){
+        console.log("Proximo");
+        MudaAlunoLista("Proximo");
+    })
+}
+
+var AlunoAtual = 0;
+function ListaAlunos(){
+    $("#Lista").html("<h3>Lista de Alunos</h3>"+
+    "<br>Nome: "+ArrayAlunos[AlunoAtual].Nome
+    +"<br>Nota 1: "+ArrayAlunos[AlunoAtual].Nota1
+    +"<br>Nota 2: "+ArrayAlunos[AlunoAtual].Nota2
+    +"<br>Nota 3: "+ArrayAlunos[AlunoAtual].Nota3
+    +"<br>Média: "+ArrayAlunos[AlunoAtual].Media
+    +"<br><br><div class\"ContainerBotoes\"><input type=\"button\" class=\"Botao\" value=\"Aluno Anterior\" id=\"AlunoAnterior\"><input type=\"button\" class=\"Botao\" value=\"Proximo Aluno\" id=\"ProximoAluno\"></div>")
+    CriaBotoes();
+}
+
+function MudaAlunoLista(Operacao){
+    if(Operacao == "Proximo"){
+        if(AlunoAtual < ArrayAlunos.length -1){
+            AlunoAtual += 1;
+            ListaAlunos();
+        }
+    }
+    else{
+        if(AlunoAtual > 0){
+            AlunoAtual -= 1;
+            ListaAlunos();
+        }
+    }
+}
+
+var QuantidadeAlunosCadastrados = ArrayAlunos.length;
+var ExisteLista = false;
+function CriaLista(){
+    if(ArrayAlunos.length != 0){
+        if(ExisteLista == false){
+            $("#Corpo").append("<br><div class=\"Lista\" id=\"Lista\"></div>");
+            ListaAlunos();
+            ExisteLista = true;
+        }
+        else{
+            ListaAlunos();
+        }
+    }
+    else{
+        window.alert("Não há alunos para listar")
+    }
+    
+}
+
+
+
 $(document).ready(function(){
     $("#BotaoEnvia").click(function(){
         if(ValidaFormulario() < 1){
@@ -94,4 +153,5 @@ $(document).ready(function(){
             window.alert(Problemas+" Problemas foram encontrados: "+Motivo)
         }
     });
+    $("#BotaoLista").click(CriaLista);
 })
