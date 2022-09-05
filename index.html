@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="Corpo">
-        <div class="Formulario">
+    <div class="Corpo" id="Corpo">
+        <div class="Formulario" id="Formulario">
             <h3>Cadastro de Aluno</h3>
             <br>
             <label for="iNome">Nome</label>
@@ -24,7 +24,10 @@
             <label for="iNota3">Nota 3</label>
             <input type="number" step="0.1" id="iNota3">
             <br><br>
-            <div class="ContainerBotoes"><input type="button" class="Botao" id="BotaoEnvia" value="Enviar"></div>
+            <div class="ContainerBotoes">
+                <input type="button" class="Botao" id="BotaoEnvia" value="Enviar">
+                <input type="button" class="Botao" id="BotaoLista" value="Listar">
+            </div>
         </div>
     </div>
 </body>
